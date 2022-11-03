@@ -11,7 +11,6 @@ class Calculator {
 
   // add digit to calculator screen
   addDigit(digit) {
-    console.log(digit);
     // Check if number already has a dot
     if (digit === "." && this.currentOperationText.innerText.includes(".")) {
       return;
@@ -136,7 +135,6 @@ buttons.forEach((btn) => {
     const value = e.target.innerText;
 
     if (+value >= 0 || value === ".") {
-      console.log(value);
       calc.addDigit(value);
     } else {
       calc.processOperation(value);
